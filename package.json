@@ -1,0 +1,20 @@
+{
+    "name": "rech-swagger-dist",
+    "version": "1.0.0",
+    "description": "Custom Swagger distribution",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RechInformatica/rech-swagger-dist.git"
+    },
+    "author": "Rech Informática LTDA",
+    "bugs": {
+        "url": "https://github.com/RechInformatica/rech-swagger-dist/issues"
+    },
+    "bundleDependencies": false,
+    "dependencies": {},
+    "deprecated": false,
+    "devDependencies": {},
+    "homepage": "https://github.com/RechInformatica/rech-swagger-dist#readme",
+    "license": "Apache-2.0"
+}

@@ -12,10 +12,10 @@ const rechSwaggerDistPath = require("rech-swagger-dist").getAbsoluteFSPath();
 ```
 
 ### Arquivos personalizados
-É possível personalizar o ícone da página, o logo exibido na barra superior e também adicionar arquivos com javascript e css personalizados. Para isso é necessário criar uma pasta que seja acessível através da url `/public` onde os arquivos serão salvos. Os ícones exibidos na guia e o ícone exibido na barras superior devem são de fornecimento **obrigatório** da aplicação.
+É possível personalizar o ícone da página, o logo exibido na barra superior e também adicionar arquivos com javascript e css personalizados. Para isso é necessário criar uma pasta que seja acessível através da url `/public` onde os arquivos serão salvos. Os ícones exibidos na guia e o ícone exibido na barra superior são de fornecimento **obrigatório** da aplicação.
 - **Ícones**
     Adicionar dois arquivos de ícones `.png` na pasta `/public`. Um arquivo deve ser tamanho 16x16 e outro 32x32. Os arquivos devem ser nomeados  `favicon-16x16.png` e `favicon-32x32.png` respectivamente.
 - **Logo da barra superior**
-    Na pasta `/public` deve ser adicionado umarquivo `.svg` nas dimensões 140x40 nomeado `api-docs-logo.svg`.
+    Na pasta `/public` deve ser adicionado um arquivo `.svg` nas dimensões 140x40 nomeado `api-docs-logo.svg`.
 - **Javascript e CSS personalizados**
     Na pasta `/public` adicionar os arquivos `custom-api-docs.js` e `custom-api-docs.css`.
