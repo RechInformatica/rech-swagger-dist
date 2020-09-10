@@ -1,21 +1,34 @@
 # rech-swagger-dist
+---
+
 Projeto que expõe a pasta dist da implementação do Swagger personalizada pela Rech Informática. Inclui tudo o que é necessário para servir o Swagger em uma aplicação server-side.
 
 ## Guia de utilização
+---
+
 1. Copiar a pasta rech-swagger-dist para a pasta destinada a servir arquivos estáticos.
 2. Copiar o arquivo `api.json` contendo as especificações da documentação da API para dentro da pasta rech-swagger-ui.
 3. Configurar a aplicação para servir o conteúdo da pasta rech-swagger-dist de forma estática.
+
+Em aplicações que utilizam o gerenciador de pacotes NPM também é possível instalar esta distribuição no node modules. **Antes de instalar a biblioteca é necessário ter configurado o proxy interno do NPM. Caso ainda não esteja configurado verifique a [wiki](http://intranet/wiki/index.php/Proxy_NPM).**
+A instalação pode ser feita com o comando:
+
+    npm install rech-swagger-dist
 
 Para recuperar o caminho absoluto do diretório onde os arquivos estáticos estão sendo servidos, usar o método `getAbsoluteFSPath`:
 ```javascript
 const rechSwaggerDistPath = require("rech-swagger-dist").getAbsoluteFSPath();
 ```
 
-### Arquivos personalizados
-É possível personalizar o ícone da página, o logo exibido na barra superior e também adicionar arquivos com javascript e css personalizados. Para isso é necessário criar uma pasta que seja acessível através da url `/public` onde os arquivos serão salvos. Os ícones exibidos na guia e o ícone exibido na barra superior são de fornecimento **obrigatório** da aplicação.
+#### Arquivos que devem ser fornecidos pela aplicação
+
+A aplicação que utilizar esta distribuição  deve fornecer os ícones exibidos na guia do navegador e na barra superior da página. Os arquivos devem ser colocados em uma pasta de acesso público na aplicação.
 - **Ícones**
-    Adicionar dois arquivos de ícones `.png` na pasta `/public`. Um arquivo deve ser tamanho 16x16 e outro 32x32. Os arquivos devem ser nomeados  `favicon-16x16.png` e `favicon-32x32.png` respectivamente.
+    Adicionar dois arquivos de imagem no formato `.png`. Um arquivo deve ser tamanho 16x16 e outro 32x32. Os arquivos devem ser nomeados  `favicon-16x16.png` e `favicon-32x32.png` respectivamente.
 - **Logo da barra superior**
-    Na pasta `/public` deve ser adicionado um arquivo `.svg` nas dimensões 140x40 nomeado `api-docs-logo.svg`.
-- **Javascript e CSS personalizados**
-    Na pasta `/public` adicionar os arquivos `custom-api-docs.js` e `custom-api-docs.css`.
+    Adicionar um arquivo `.svg` nas dimensões 140x40 nomeado `api-docs-logo.svg`.
+
+### Javascript e CSS personalizados
+---
+
+É posssível adicionar arquivos com javascript e CSS personalizados. Os arquivos são opcionais e caso utilizados devem ser colocados em uma pasta com acesso público. Os arquivos devem ter os seguintes nomes: `custom-api-docs.css` e `custom-api-docs.js`.
