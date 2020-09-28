@@ -1,10 +1,8 @@
 # rech-swagger-dist
----
 
 Projeto que expõe a pasta dist da implementação do Swagger personalizada pela Rech Informática. Inclui tudo o que é necessário para servir o Swagger em uma aplicação server-side.
 
 ## Guia de utilização
----
 
 1. Copiar a pasta rech-swagger-dist para a pasta destinada a servir arquivos estáticos.
 2. Copiar o arquivo `api.json` contendo as especificações da documentação da API para dentro da pasta rech-swagger-ui.
@@ -29,6 +27,11 @@ A aplicação que utilizar esta distribuição  deve fornecer os ícones exibido
     Adicionar um arquivo `.svg` nas dimensões 140x40 nomeado `api-docs-logo.svg`.
 
 ### Javascript e CSS personalizados
----
 
 É posssível adicionar arquivos com javascript e CSS personalizados. Os arquivos são opcionais e caso utilizados devem ser colocados em uma pasta com acesso público. Os arquivos devem ter os seguintes nomes: `custom-api-docs.css` e `custom-api-docs.js`.
+
+#### Campos dos esquemas com propriedades personalizadas
+
+É possível adicionar propriedades personalizadas, como cor, tamanho, entre outras, aos campos dos esquemas. Com isso, podemos personalizar e destacar os campos que quisermos facilmente.
+
+Basta informar nos campos a propriedade `customClass`. Detalhe: A classe informada deve existir em `custom-api-docs.css`.
