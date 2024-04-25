@@ -1,6 +1,6 @@
 {
     "name": "rech-swagger-dist",
-    "version": "1.7.0",
+    "version": "1.8.0",
     "description": "Custom Swagger distribution",
     "main": "index.js",
     "repository": {
